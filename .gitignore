@@ -3,6 +3,7 @@ node_modules/**/*
 tmp/*
 log/**/*.log
 public/libs/**/*
+dest/**/*
 
 # Windows image file caches
 Thumbs.db

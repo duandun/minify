@@ -3,7 +3,8 @@ var gulp = require("gulp");
 var uglify = require("gulp-uglify"),
 		rename = require("gulp-rename"),
 		clean = require("gulp-clean"),
-		imagemin = require("gulp-imagemin");
+		imagemin = require("gulp-imagemin"),
+		watch = require("gulp-watch");
 
 // js压缩
 gulp.task('javascripts', function() {
@@ -26,7 +27,7 @@ gulp.task("clean", function() {
 });
 
 gulp.task("develop", function() {
-	gulp.run("javascripts");
+	gulp.run("javascripts", "imagemin");
 });
 
 gulp.task("default", ["clean"], function() {
