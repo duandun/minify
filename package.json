@@ -1,0 +1,11 @@
+{
+  "name": "minify",
+  "version": "0.0.1",
+  "description": "minify js and css",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-clean": "^0.3.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.2.0"
+  }
+}
