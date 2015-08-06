@@ -4,11 +4,13 @@ var uglify = require("gulp-uglify"),
 		rename = require("gulp-rename"),
 		clean = require("gulp-clean"),
 		imagemin = require("gulp-imagemin"),
-		watch = require("gulp-watch");
+		watch = require("gulp-watch"),
+		concat = require("gulp-concat");
 
-// js压缩
+// js压缩与合并
 gulp.task('javascripts', function() {
-	gulp.src("./js/**/*.js")
+	gulp.src("./js/jsqrcode/*.js")
+			.pipe(concat('main.js'))
 			.pipe(rename({suffix: '.min'}))
 			.pipe(uglify())
 			.pipe(gulp.dest("./dest"));
